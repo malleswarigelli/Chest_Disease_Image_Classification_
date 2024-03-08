@@ -1,1 +1,1 @@
-# Chest_Disease_Image_Classification_
+# Chest_Disease_Image_Classification

@@ -14,7 +14,7 @@ import base64
 
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
-    """reads yaml file and returns
+    """reads yaml file and returns ConfigBox type instead of dict
 
     Args:
         path_to_yaml (str): path like input
@@ -28,9 +28,9 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """
     try:
         with open(path_to_yaml) as yaml_file:
-            content = yaml.safe_load(yaml_file)
+            content = yaml.safe_load(yaml_file) # loads as dictionary
             logger.info(f"yaml file: {path_to_yaml} loaded successfully")
-            return ConfigBox(content)
+            return ConfigBox(content) # convert dictionary to Configbox type (check in .ipynb file)
     except BoxValueError:
         raise ValueError("yaml file is empty")
     except Exception as e:

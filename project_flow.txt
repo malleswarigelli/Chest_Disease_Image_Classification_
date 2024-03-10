@@ -1,0 +1,24 @@
+
+Project name: Chest disease classification from CT Scan Image 
+
+- Image classification with Tensorflow
+- Build neural network (ANN, CNN)
+
+flow
+1. project introduction
+2. create project template
+3. project setup
+4. requirements.txt installation
+5. create, activate virtual environment
+6. logging, exception, utility
+7. project workflow ...
+8. All components notebook Experiment --> data ingestion (read image data from google drive), CNN extracts features directly (validation, transformation not needed),
+                                          prepare base model (pretrained ensemble model: vgg16), 
+                                          model training, model evaluation (metrics: accuracy, losses), model pusher
+9. All components modular coding implementation
+10. pipelines: training, prediction
+11. MLOPs tools: mlflow (experiment tracking), model registration
+                 DVC: Data version control (for pipeline tracking), since DL project with images, training is computationally expensive, pipeline tracking helps 
+12. User app i.e App.py
+13. Docker 
+14. CI/CD deployment using Jenkins

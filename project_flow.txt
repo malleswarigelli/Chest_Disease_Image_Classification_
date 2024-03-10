@@ -17,6 +17,6 @@ flow
 8. pipelines: training, prediction
 9. MLOPs tools: mlflow (experiment tracking), model registration
                  DVC: Data version control (for pipeline tracking), since DL project with images, training is computationally expensive, pipeline tracking helps 
-10. User app i.e App.py
+10. User app i.e App.py (Flask, web application framework)
 11. Docker 
 12. CI/CD deployment using Jenkins

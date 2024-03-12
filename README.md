@@ -31,9 +31,9 @@ git commit -m "Updated"
 git push origin main
 
 # How to run?
-conda create -n chest python=3.8 -y
-conda activate chest
-pip install -r requirements.txt
+- conda create -n chest python=3.8 -y
+- conda activate chest
+- pip install -r requirements.txt
 
 
 ### Mlflow dagshub connection uri (get this from dagshub.com repository experiment )

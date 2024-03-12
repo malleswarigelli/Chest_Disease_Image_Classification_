@@ -1,7 +1,19 @@
+
+
 # Chest_Disease_Image_Classification
+- DL project: Image classification with CNN architexture
+
+# Tools used:
+- Ingest data from Google drive: `gdown` package
+- Experiment tracking with open source MLOPs tools: `MLFlow, Dagshub` 
+- Model registration: MLFlow (MLOPs tool)
+- Docker
+- User app: 
+- CI/CD deployment: Jenkins
+- Data version control: DVC (MLOPs tool) -> for pipeline tracking
 
 # Workflows
-1. Update config.yaml
+1. Update config.yaml # to define constants
 2. Update params.yaml
 3. Update the entity
 4. Update the configuration manager in src config

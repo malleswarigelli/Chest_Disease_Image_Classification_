@@ -22,3 +22,20 @@ git push origin main
 conda create -n chest python=3.8 -y
 conda activate chest
 pip install -r requirements.txt
+
+
+### Mlflow dagshub connection uri (get this from dagshub.com repository experiment )
+MLFLOW_TRACKING_URI=https://dagshub.com/malleswarigelli/MLflow_Experimnet_test.mlflow \
+MLFLOW_TRACKING_USERNAME=malleswarigelli \
+MLFLOW_TRACKING_PASSWORD=2285aa424e395caab6840e555b7d9680a386cde7 \
+python script.py
+
+# RUN from bash terminal
+
+```bash
+
+export MLFLOW_TRACKING_URI=https://dagshub.com/malleswarigelli/MLflow_Experimnet_test.mlflow
+export MLFLOW_TRACKING_USERNAME=malleswarigelli
+export MLFLOW_TRACKING_PASSWORD=2285aa424e395caab6840e555b7d9680a386cde7
+
+```

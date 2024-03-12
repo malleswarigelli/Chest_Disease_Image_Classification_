@@ -1,6 +1,6 @@
 tensorflow==2.12.0
 pandas 
-gdown # to download from google drive
+gdown # to download data from google drive
 dvc
 mlflow==2.2.2
 notebook

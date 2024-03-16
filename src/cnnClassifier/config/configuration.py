@@ -10,7 +10,7 @@ class ConfigurationManager:
         
     """
     def __init__(self,
-        # params: config.yaml, params.yaml          
+        # params: config.yaml, params.yaml file paths          
         config_filepath = CONFIG_FILE_PATH,
         params_filepath = PARAMS_FILE_PATH):
         

@@ -27,9 +27,10 @@ class DataIngestion:
         
         try:
             dataset_url = self.data_ingestion_config.source_URL
-            zip_download_dir = self.data_ingestion_config.local_data_file #artifacts/data_ingestion/data.zip
+            zip_download_dir = self.data_ingestion_config.local_data_file # artifacts/data_ingestion/data.zip
             # create directory to store zip file
-            os.makedirs("artifacts/data_ingestion", exist_ok=True)
+            root_dir_path = self.data_ingestion_config.root_dir
+            os.makedirs(root_dir_path, exist_ok=True)
             logger.info(f"Downloading data from {dataset_url} into {zip_download_dir}")
             
             file_id = dataset_url.split('/')[-2]
@@ -53,18 +54,18 @@ class DataIngestion:
         
         try:
             # path for unzip_dir 
-            unzip_path = self.data_ingestion_config.unzip_dir  # artifacts/data_ingestion
-            os.makedirs(unzip_path, exist_ok=True) 
+            unzip_dir_path = self.data_ingestion_config.unzip_dir  # artifacts/data_ingestion
+            os.makedirs(unzip_dir_path, exist_ok=True) 
             
-            logger.info(f"Extracting zip file into {unzip_path}")
+            logger.info(f"Extracting zip file into {unzip_dir_path}")
             
             zip_file = self.data_ingestion_config.local_data_file
             # unzip from artifacts/data_ingestion/data.zip
             with zipfile.ZipFile(zip_file, "r") as zip_ref:
                 # extract into artifacts/data_ingestion
-                zip_ref.extractall(unzip_path)
+                zip_ref.extractall(unzip_dir_path)
                 
-            logger.info(f"Extracted zip data from {zip_file} into {unzip_path}") 
+            logger.info(f"Extracted zip data from {zip_file} into {unzip_dir_path}") 
             logger.info("Then, exiting extract_zip_data method of DataIngestion component")   
             
         except Exception as e:

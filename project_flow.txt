@@ -10,13 +10,16 @@ flow
 3. project setup (create, activate virtual environment, requirements.txt installation)
 4. logging, exception, utility
 5. project workflow ...
-6. All components notebook Experiment --> data ingestion (read image data from google drive), CNN extracts features directly (validation, transformation not needed),
-                                          prepare base model (pretrained ensemble model: vgg16), 
-                                          model training, model evaluation (metrics: accuracy, losses), model pusher
+6. All components notebook Experiment --> 1. data ingestion (read image data from google drive), CNN extracts features directly (validation, transformation not needed),
+                                          2. prepare base model (import pretrained ensemble model for Imagenet dataset: vgg16), finetune and customize for our chest data
+                                          3. model training, 
+                                          4. model evaluation add MLFlow (metrics: accuracy, losses), 
+                                          5. model pusher
 7. All components modular coding implementation
 8. pipelines: training, prediction
-9. MLOPs tools: mlflow (experiment tracking), model registration
-                 DVC: Data version control (for pipeline tracking), since DL project with images, training is computationally expensive, pipeline tracking helps 
+9. MLOPs tools: mlflow (experiment tracking, model registration),
+                DVC: Data version control (for pipeline tracking), since DL project with images, training is computationally expensive, pipeline tracking helps 
 10. User app i.e App.py (Flask, web application framework)
 11. Docker 
 12. CI/CD deployment using Jenkins
+

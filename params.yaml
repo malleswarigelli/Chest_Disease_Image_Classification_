@@ -1,3 +1,10 @@
-# model parameters
+# vgg16 model parameters
 
-name : malli
+AUGMENTATION: True
+IMAGE_SIZE: [224,224,3]
+BATCH_SIZE: 16
+INCLUDE_TOP: False # drop dense layer
+EPOCHS: 1
+CLASSES: 2 #o/p 2 classes
+WEIGHTS: imagenet # fixed weights
+LEARNING_RATE: 0.01

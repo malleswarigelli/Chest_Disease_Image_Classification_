@@ -1,6 +1,6 @@
 from cnnClassifier.constants import *
 from cnnClassifier.utils.common import read_yaml, create_directories
-from cnnClassifier.entity.config_entity import DataIngestionConfig
+from cnnClassifier.entity.config_entity import DataIngestionConfig, PrepareBaseModelConfig
 from cnnClassifier import logger
 
 # write configuration manager
@@ -41,3 +41,28 @@ class ConfigurationManager:
         logger.info("Then, exiting get_data_ingestion_config method of ConfigurationManager")
         return data_ingestion_config
         
+    def get_prepare_base_model_config (self) -> PrepareBaseModelConfig:
+        """
+        Method: get_prepare_base_model_config
+        Params:
+        Returns: configurations from config.yaml, params.yaml for prepare_base_model component i.e PrepareBaseModelConfig 
+        """
+        logger.info("Entering get_prepare_base_model_config method of ConfigurationManager")
+        prepare_base_model_config = self.config.prepare_base_model # prepare_base_model key from config.yaml
+        params_config = self.params
+        create_directories([prepare_base_model_config.root_dir]) # creates artifacts/prepare_base_model
+        
+        # returning from entity: DataIngestionConfig dataclass
+        prepare_base_model_config= PrepareBaseModelConfig(
+            root_dir = Path(prepare_base_model_config.root_dir),
+            base_model_path= Path(prepare_base_model_config.base_model_path),
+            updated_base_model_path= Path(prepare_base_model_config.updated_base_model_path),
+            params_image_size= params_config.IMAGE_SIZE, 
+            params_learning_rate= params_config.LEARNING_RATE, 
+            params_include_top= params_config.INCLUDE_TOP,
+            params_weights= params_config.WEIGHTS,
+            params_classes= params_config.CLASSES   
+          
+        )
+        logger.info("Then, exiting prepare_base_model method of ConfigurationManager")
+        return prepare_base_model_config

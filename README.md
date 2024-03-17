@@ -37,17 +37,16 @@ git push origin main
 
 
 ### Mlflow dagshub connection uri (get this from dagshub.com repository experiment )
-MLFLOW_TRACKING_URI=https://dagshub.com/malleswarigelli/MLflow_Experimnet_test.mlflow \
+MLFLOW_TRACKING_URI=https://dagshub.com/malleswarigelli/Chest_Disease_Image_Classification_.mlflow \
 MLFLOW_TRACKING_USERNAME=malleswarigelli \
-MLFLOW_TRACKING_PASSWORD=2285aa424e395caab6840e555b7d9680a386cde7 \
-python script.py
+MLFLOW_TRACKING_PASSWORD==2285aa424e395caab6840e555b7d9680a386cde7
 
 # RUN from bash terminal
 
 ```bash
 
-export MLFLOW_TRACKING_URI=https://dagshub.com/malleswarigelli/MLflow_Experimnet_test.mlflow
+export MLFLOW_TRACKING_URI=https://dagshub.com/malleswarigelli/Chest_Disease_Image_Classification_.mlflow
 export MLFLOW_TRACKING_USERNAME=malleswarigelli
-export MLFLOW_TRACKING_PASSWORD=2285aa424e395caab6840e555b7d9680a386cde7
+export MLFLOW_TRACKING_PASSWORD==2285aa424e395caab6840e555b7d9680a386cde7
 
 ```

@@ -31,16 +31,14 @@ class ConfigurationManager:
         """
         logger.info("Entering get_data_ingestion_config method of ConfigurationManager")
         data_ingestion_config = self.config.data_ingestion # data_ingestion key from config.yaml
-        create_directories([
-            Path(data_ingestion_config.root_dir)
-            ]) # creates artifacts/data_ingestion directory
+        create_directories([data_ingestion_config.root_dir]) # creates artifacts/data_ingestion directory
         
         # returning from entity: DataIngestionConfig dataclass
         data_ingestion_config= DataIngestionConfig(
-            root_dir = Path(data_ingestion_config.root_dir),
+            root_dir = data_ingestion_config.root_dir,
             source_URL= data_ingestion_config.source_URL,
-            local_data_file= Path(data_ingestion_config.local_data_file),          
-            unzip_dir= Path(data_ingestion_config.unzip_dir)
+            local_data_file= data_ingestion_config.local_data_file,          
+            unzip_dir= data_ingestion_config.unzip_dir
         )
         logger.info("Then, exiting get_data_ingestion_config method of ConfigurationManager")
         return data_ingestion_config
@@ -54,9 +52,7 @@ class ConfigurationManager:
         logger.info("Entering get_prepare_base_model_config method of ConfigurationManager")
         prepare_base_model_config = self.config.prepare_base_model # prepare_base_model key from config.yaml
         params_config = self.params
-        create_directories([
-            Path(prepare_base_model_config.root_dir)
-            ]) # creates artifacts/prepare_base_model
+        create_directories([prepare_base_model_config.root_dir]) # creates artifacts/prepare_base_model
         
         # returning from entity: PrepareBaseModelConfig dataclass
         prepare_base_model_config= PrepareBaseModelConfig(
@@ -83,7 +79,7 @@ class ConfigurationManager:
         model_trainer_config = self.config.model_training # model_training key from config.yaml
         prepare_base_model_config = self.config.prepare_base_model # prepare_base_model key from config.yaml
         params_config = self.params # params.yaml              
-        training_data= os.path.join(self.config.data_ingestion.unzip_dir, "Chest-CT-Scan_data") # training data from data ingestion artifact
+        training_data= os.path.join(self.config.data_ingestion.unzip_dir, "Chest-CT-Scan-data") # training data from data ingestion artifact
         
         create_directories([
             Path(model_trainer_config.root_dir)

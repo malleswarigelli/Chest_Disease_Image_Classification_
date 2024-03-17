@@ -5,7 +5,7 @@
 
 # Tools used:
 - Ingest data from Google drive: `gdown` package
-- Experiment tracking with open source MLOPs tools: `MLFlow, Dagshub` 
+- Experiment tracking (hyper parameter tuning) with open source MLOPs tools: `MLFlow, Dagshub` 
 - Model registration: MLFlow (MLOPs tool)
 - Docker
 - User app: 

@@ -1,9 +1,10 @@
 from cnnClassifier.constants import *
 from cnnClassifier.utils.common import read_yaml, create_directories
 from cnnClassifier.entity.config_entity import (DataIngestionConfig, PrepareBaseModelConfig,
-                                                ModelTrainerConfig)
+                                                ModelTrainerConfig, ModelEvaluationConfig)
 from cnnClassifier import logger
 import os
+
 
 # write configuration manager
 class ConfigurationManager:
@@ -99,3 +100,21 @@ class ConfigurationManager:
         )
         logger.info("Then, exiting get_model_trainer_config method of ConfigurationManager")
         return model_trainer_config
+    
+    def get_model_evaluation_config (self) -> ModelEvaluationConfig:
+        """
+        Method: get_model_evaluation_config
+        Params:
+        Returns: configuration for Model Evaluation component i.e ModelEvaluationConfig 
+        """
+        logger.info("Entering get_model_evaluation_config method of ConfigurationManager")
+        model_evaluation_config = ModelEvaluationConfig(path_of_trained_model= "artifacts/model_training/model.h5", 
+                                                        training_data= "artifacts/data_ingestion/Chest-CT-Scan-data",                                                         
+                                                        mlflow_uri= "https://dagshub.com/malleswarigelli/Chest_Disease_Image_Classification_.mlflow", 
+                                                        all_params= self.params, 
+                                                        params_batch_size= self.params.BATCH_SIZE, 
+                                                        params_image_size= self.params.IMAGE_SIZE
+            
+        )
+        logger.info("Exiting get_model_evaluation_config method of ConfigurationManager")
+        return model_evaluation_config

@@ -7,4 +7,4 @@ INCLUDE_TOP: False # drop dense layer
 EPOCHS: 1
 CLASSES: 2 #o/p 2 classes
 WEIGHTS: imagenet # fixed weights
-LEARNING_RATE: 0.02
+LEARNING_RATE: 0.01

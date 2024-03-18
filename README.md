@@ -50,3 +50,9 @@ export MLFLOW_TRACKING_USERNAME=malleswarigelli
 export MLFLOW_TRACKING_PASSWORD=2285aa424e395caab6840e555b7d9680a386cde7
 
 ```
+dvc init # initializes dvc (o/p .dvc, .dvcignore files generated)
+dvc repro # runs dvc.yaml file -> creates artificats -> dvc.lock
+dev dag
+
+```
+

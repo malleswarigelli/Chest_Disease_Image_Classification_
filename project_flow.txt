@@ -14,7 +14,7 @@ flow
                                           2. prepare base model (import pretrained ensemble model for Imagenet dataset: vgg16), finetune and customize for our chest data
                                           3. model training, 
                                           4. model evaluation add MLFlow (metrics: accuracy, losses), 
-                                          5. model pusher
+                                          5. model pusher (since model.h5 size is small, pushed to github)
 7. All components modular coding implementation
 8. pipelines: training, prediction
 9. MLOPs tools: mlflow (experiment tracking, model registration),

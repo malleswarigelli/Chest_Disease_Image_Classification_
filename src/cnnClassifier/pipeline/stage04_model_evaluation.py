@@ -17,7 +17,8 @@ class ModelEvaluationPipeline:
             
             logger.info("ModelEvaluation steps started")
             model_evaluation = ModelEvaluation(evaluation_config=evaluation_config) # create object for ModelTraining class
-            model_evaluation.evaluation() # obj.method()    
+            model_evaluation.evaluation() # obj.method() 
+            model_evaluation.save_metrics()   
             model_evaluation.log_into_mlflow()
 
             logger.info("OK! ModelEvaluation component completed")

@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/anjik/Desktop/MLOPs_projects/Chest_Disease_Image_Classification/mlruns/0/abcd258989884c6caf0d8951a96c1a06/artifacts
+end_time: 1710772647601
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: abcd258989884c6caf0d8951a96c1a06
+run_name: upset-steed-449
+run_uuid: abcd258989884c6caf0d8951a96c1a06
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710772639996
+status: 3
+tags: []
+user_id: anjik

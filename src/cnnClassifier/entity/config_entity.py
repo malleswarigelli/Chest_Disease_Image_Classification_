@@ -33,11 +33,14 @@ class ModelTrainerConfig:
     params_is_augmentation: bool
     params_image_size: list
     
+ 
 @dataclass(frozen=True)
 class ModelEvaluationConfig:
+    root_dir: Path
+    metrics_path: Path
     path_of_trained_model: Path
     training_data: Path
     all_params: dict
     mlflow_uri: str
     params_batch_size: int    
-    params_image_size: list    
+    params_image_size: list  

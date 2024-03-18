@@ -69,7 +69,7 @@ class ModelEvaluation:
         On Failure  : Write an exception log and then raise an exception
         """
         metrics= {"loss": self.metric[0], "accuracy": self.metric[1]}
-        save_json(path= Path("scores.json"), data= metrics)        
+        save_json(path= self.evaluation_config.metrics_path, data= metrics)        
         
         
     def log_into_mlflow(self):

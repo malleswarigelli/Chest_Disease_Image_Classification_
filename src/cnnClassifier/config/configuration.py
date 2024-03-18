@@ -109,7 +109,14 @@ class ConfigurationManager:
         Returns: configuration for Model Evaluation component i.e ModelEvaluationConfig 
         """
         logger.info("Entering get_model_evaluation_config method of ConfigurationManager")
-        model_evaluation_config = ModelEvaluationConfig(path_of_trained_model= "artifacts/model_training/model.h5", 
+        model_evaluation_config = self.config.model_evaluation
+        create_directories([
+            Path(model_evaluation_config.root_dir)
+                 ])
+        
+        model_evaluation_config = ModelEvaluationConfig(root_dir= Path(model_evaluation_config.root_dir),
+                                                        metrics_path= Path(model_evaluation_config.metrics_path),
+                                                        path_of_trained_model= "artifacts/model_training/model.h5", 
                                                         training_data= "artifacts/data_ingestion/Chest-CT-Scan-data",                                                         
                                                         mlflow_uri= "https://dagshub.com/malleswarigelli/Chest_Disease_Image_Classification_.mlflow", 
                                                         all_params= self.params, 

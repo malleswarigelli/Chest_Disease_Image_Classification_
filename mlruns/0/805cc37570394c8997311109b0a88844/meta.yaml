@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/anjik/Desktop/MLOPs_projects/Chest_Disease_Image_Classification/mlruns/0/805cc37570394c8997311109b0a88844/artifacts
+end_time: 1710777596462
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 805cc37570394c8997311109b0a88844
+run_name: unleashed-roo-431
+run_uuid: 805cc37570394c8997311109b0a88844
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710777588255
+status: 3
+tags: []
+user_id: anjik

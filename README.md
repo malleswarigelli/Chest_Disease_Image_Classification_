@@ -47,6 +47,6 @@ MLFLOW_TRACKING_PASSWORD==2285aa424e395caab6840e555b7d9680a386cde7
 
 export MLFLOW_TRACKING_URI=https://dagshub.com/malleswarigelli/Chest_Disease_Image_Classification_.mlflow
 export MLFLOW_TRACKING_USERNAME=malleswarigelli
-export MLFLOW_TRACKING_PASSWORD==2285aa424e395caab6840e555b7d9680a386cde7
+export MLFLOW_TRACKING_PASSWORD=2285aa424e395caab6840e555b7d9680a386cde7
 
 ```

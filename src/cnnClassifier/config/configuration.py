@@ -90,6 +90,7 @@ class ConfigurationManager:
         model_trainer_config= ModelTrainerConfig(
             root_dir = Path(model_trainer_config.root_dir),
             trained_model_path= Path(model_trainer_config.trained_model_path),
+            final_trained_model_path= Path(model_trainer_config.final_trained_model_path),            
             updated_base_model_path= Path(prepare_base_model_config.updated_base_model_path),
             training_data= Path(training_data),
             params_epochs= params_config.EPOCHS,

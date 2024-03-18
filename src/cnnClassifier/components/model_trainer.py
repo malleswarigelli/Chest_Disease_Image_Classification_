@@ -12,12 +12,12 @@ import time
 
 class ModelTraining:
     """
-     This class trains the data with updated Vgg16 model
+    This class trains the data with updated Vgg16 model
+    
     """
     def __init__(self, model_training_config:ModelTrainerConfig):
         self.model_training_config= model_training_config 
         
-    
     def get_base_model(self):
         """
         Method Name : get_base_model
@@ -91,4 +91,10 @@ class ModelTraining:
         
         logger.info("Trained model is saved")
         self.save_model(path=self.model_training_config.trained_model_path,
+                        model= self.model)        
+        
+        logger.info("Final Trained model is saved to model directory for prediction")
+        self.save_model(path= self.model_training_config.final_trained_model_path,
                         model= self.model)
+        
+        

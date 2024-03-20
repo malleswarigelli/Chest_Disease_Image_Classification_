@@ -75,7 +75,7 @@ class ModelEvaluation:
     def log_into_mlflow(self):
         """
         Method Name : log_into_mlflow
-        Description : log experiments in mlflow
+        Description : log parameters, metrics, experiments in mlflow
         Output      : 
         On Failure  : Write an exception log and then raise an exception
         """

@@ -7,10 +7,11 @@
 - Ingest data from Google drive: `gdown` package
 - Experiment tracking (hyper parameter tuning) with open source MLOPs tools: `MLFlow, Dagshub` 
 - Model registration: MLFlow (MLOPs tool)
-- Docker
-- User app: 
+- Containerization: Docker, AWS ECR
+- User app: Flask
 - CI/CD deployment: Jenkins
 - Data version control: DVC (MLOPs tool) -> for pipeline tracking
+- Model deployment: AWS Ec2 
 
 # Workflows
 1. Update config.yaml # to define constants

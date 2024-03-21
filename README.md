@@ -1,7 +1,7 @@
 
 
 # Chest_Disease_Image_Classification
-- DL project: Image classification with CNN architexture
+- DL project: Image classification with CNN architexture; used custom Vgg16 for model training
 
 # Tools used:
 - Ingest data from Google drive: `gdown` package

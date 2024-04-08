@@ -48,22 +48,22 @@ git push origin main
 
 
 ### Mlflow dagshub connection uri (get this from dagshub.com repository experiment )
-MLFLOW_TRACKING_URI=https://dagshub.com/malleswarigelli/Chest_Disease_Image_Classification_.mlflow \
-MLFLOW_TRACKING_USERNAME=malleswarigelli \
-MLFLOW_TRACKING_PASSWORD==2285aa424e395caab6840e555b7d9680a386cde7
+MLFLOW_TRACKING_URI= MLFLOW_TRACKING_URI
+MLFLOW_TRACKING_USERNAME= MLFLOW_TRACKING_USERNAME
+MLFLOW_TRACKING_PASSWORD=MLFLOW_TRACKING_PASSWORD
 
 # RUN from bash terminal
 
 ```bash
 
-export MLFLOW_TRACKING_URI=https://dagshub.com/malleswarigelli/Chest_Disease_Image_Classification_.mlflow
-export MLFLOW_TRACKING_USERNAME=malleswarigelli
-export MLFLOW_TRACKING_PASSWORD=2285aa424e395caab6840e555b7d9680a386cde7
+export MLFLOW_TRACKING_URI= MLFLOW_TRACKING_URI
+export MLFLOW_TRACKING_USERNAME= MLFLOW_TRACKING_USERNAME
+export MLFLOW_TRACKING_PASSWORD= MLFLOW_TRACKING_PASSWORD
 
 ```
-dvc init # initializes dvc (o/p .dvc, .dvcignore files generated)
-dvc repro # runs dvc.yaml file -> creates artificats -> dvc.lock
-dev dag
+- dvc init # initializes dvc (o/p .dvc, .dvcignore files generated)
+- dvc repro # runs dvc.yaml file -> creates artificats -> dvc.lock
+- dev dag
 
 ```
 

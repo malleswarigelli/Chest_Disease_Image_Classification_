@@ -9,7 +9,9 @@ Build and deploy end to end DL: Image classification model to AWS EC2 using Dock
 - Utilized DagsHub with MLflow for experiment tracking and model management, allowed us to track the experiments, compare results and manage models effectively.
 - Also integrated DVC (Data Version Control) for managing the data pipeline to ensure reproducibility and collaboration among the team members.
 
-## The project workflows were as follows:
+## Flow of End to End robust automatic pipeline:
+
+![Chest_Disease_End to End_Architexture drawio](https://github.com/malleswarigelli/Chest_Disease_Image_Classification_/assets/84688050/b5d0083b-6698-4e43-bb41-14c724244af3)
 
 - Data Ingestion: We ingested the CT scan images from Google drive using `gdown` package. Images were preprocessed to remove any noise and normalize the pixel values.
 - Prepare Base Model: We prepared a base CNN model using a pre-trained model, VGG16. Then customized VGG16 model to train on our dataset (dropped dense layer, added custom dense layer since our dataset had only two classes).

@@ -1,10 +1,11 @@
 
 # Chest_Disease_Image_Classification
-Build and deploy end to end DL: Image classification model to AWS EC2 using Docker, CI/CD Jenkins
+- Build and deploy an end to end DL: Image classification application to AWS EC2 using Docker, CI/CD Jenkins
 
-
-- In this project, we aimed to revolutionize healthcare by accurately classifying chest diseases from CT scan images. This would enhance early diagnosis and treatment. We leveraged a DL approach: Image Classification with CNN architexture (custom Vgg16) for model training.
-- Convolutional Neural Network (CNN) model was trained on a dataset of chest CT scan images, labeled as one of the following diseases: Normal, adenocarcinoma. 
+- In this project, we aimed to revolutionize healthcare by accurately classifying chest diseases from CT scan images. This would enhance early diagnosis and treatment.
+- We leveraged `Transfer Learning` approach: downloaded a pre-trained Vgg16 model (CNN architexture) from Keras and fine-tuned the model to fit our custom dataset.
+- Fine tuning is done by dropping original dense layers and added a custon dense layer since our dataset has only two classes unlike Imagenet data used for pretraining Vgg16 had 1000 classes.
+- Fine tuned Vgg16 model was trained on a chest CT scan images dataset having two labels: Normal, adenocarcinoma. 
 - Project structure is made with a data science project template. This template ensured modularity, reusability, and maintainability of the code. It included modules for logging, exception handling, and utilities.
 - Utilized DagsHub with MLflow for experiment tracking and model management, allowed us to track the experiments, compare results and manage models effectively.
 - Also integrated DVC (Data Version Control) for managing the data pipeline to ensure reproducibility and collaboration among the team members.
